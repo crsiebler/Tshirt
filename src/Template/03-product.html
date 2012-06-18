@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>T-Shirt Store Product</title>
+	<link href="includes/style.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="includes/js/carousel.js"></script>
+	<script type="text/javascript" src="includes/js/jquery.nivo.slider.pack.js"></script>
+	<script type="text/javascript" src="includes/js/nivo.slider.setting.js"></script>
+	<link href='includes/cloud-zoom/cloud-zoom.css' rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src="includes/cloud-zoom/cloud-zoom.1.0.2.min.js"></script>
+	<script type="text/javascript">
+	jQuery(function () {
+    var tabContainers = jQuery('div.tabs > div');
+    
+    jQuery('div.tabs ul.tabNavigation a').click(function () {
+        tabContainers.hide().filter(this.hash).show();
+        
+        jQuery('div.tabs ul.tabNavigation a').removeClass('active');
+        jQuery(this).addClass('active');
+        
+        return false;
+    }).filter(':first').click();
+});
+	</script>
+	</head>
+
+	<body>
+<div align="center" style="background:#FFF; padding:5px; position:fixed; color:#999; top:0; position:fixed; width:100%; z-index:10000;"><a href="01-home.html">Home</a> | <a href="02-category.html">Category</a> | <a href="03-product.html">Products</a> | <a href="04-checkout.html">Checkout</a> | <a href="05-page.html">Page</a></div>
+<div class="page">
+      <div class="header-container">
+    <div class="header">
+          <div class="shopLinks">
+        <ul class="links">
+              <li class="first"><a title="My Account" href="#">My Account</a></li>
+              <li><a title="My Wishlist" href="#">My Wishlist</a></li>
+              <li><a class="top-link-cart" title="My Cart" href="#">My Cart</a></li>
+              <li><a class="top-link-checkout" title="Checkout" href="#">Checkout</a></li>
+              <li class=" last"><a title="Log In" href="#">Log In</a></li>
+            </ul>
+        <p class="welcome-msg">Welcome to our online store!<span>&nbsp;</span></p>
+      </div>
+          <h1 class="logo"><strong>Magento Commerce</strong><a class="logo" title="Magento Commerce" href="#"><img alt="Magento Commerce" src="images/logo.png" /></a></h1>
+          <div class="quick-access">
+        <div class="shoppingCart">
+              <div class="block block-cart">
+            <div class="block-content">
+                  <p class="empty">You have no items in your shopping cart.</p>
+                </div>
+          </div>
+            </div>
+        <div class="search">
+              <div class="form-search">
+            <input type="text" class="input-text" value="" name="q" />
+            <button class="button" title="Search" type="submit"></button>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+      <div class="nav-container">
+    <ul id="nav">
+          <li class="level-top first"> <a class="level-top" href="#"> <span>New Products</span> </a></li>
+          <li class="level-top"> <a class="level-top" href="#"> <span>Specials </span> </a> </li>
+          <li class="level-top"> <a class="level-top" href="#"> <span>Cool T-Shirts</span> </a> </li>
+          <li class="level-top"> <a class="level-top" href="#"> <span>Teens</span> </a> </li>
+          <li class="level-top"> <a class="level-top" href="#"> <span>Active Wear</span> </a> </li>
+          <li class="level-top last"> <a class="level-top" href="#"> <span>Jackets &amp; Coats</span> </a> </li>
+        </ul>
+  </div>
+      <div class="main">
+    <div class="breadcrumbs">
+          <ul>
+        <li class="home"> <a title="Go to Home Page" href="#">Home</a> <span>/ </span> </li>
+        <li> <strong>T-Shirt Lorem Ipsum is simply dummy On Impatience</strong> </li>
+      </ul>
+        </div>
+    <div class="col-main1">
+          <div class="top-full">&nbsp;</div>
+          <div class="product-view">
+        <div class="product-essential">
+              <div class="product-img-box">
+            <p class="product-image product-image-zoom"> <a href='images/5.jpg' class = 'cloud-zoom' id='zoom1' rel="position: 'inside'"> <img src="images/5.jpg" width="354" height="354" alt="Optional title display" /> </a> </p>
+            <div class="more-views">
+                  <ul>
+                <li><a href='images/5.jpg' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: 'images/5.jpg' "> <img src="images/5_1.jpg" alt = "Thumbnail 1"/></a></li>
+              </ul>
+                </div>
+          </div>
+              <div class="product-shop">
+            <div class="product-name">
+                  <h1>T-Shirt Lorem Ipsum is simply dummy On Impatience</h1>
+                </div>
+            <div class="ratings">
+                  <div class="rating-box">
+                <div style="width: 70%;" class="rating"></div>
+              </div>
+                  <p class="rating-links"> <a href="#">2 Review(s)</a> <span class="separator">|</span> <a href="#">Add Your Review</a> </p>
+                </div>
+            <div class="short-description">
+                  <div class="std">T-Shirt Lorem Ipsum is simply dummy On Impatience<br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+                Integer ut nisl ante, sit amet elementum ipsum.<br />
+                Cras pharetra nulla sit amet mi eleifend in interdum justo fringilla.</div>
+                </div>
+            <div class="p-box-top"></div>
+            <div class="p-box">
+                  <p class="availability in-stock">Availability: <span>In stock</span></p>
+                  <div class="price-box"> <span id="product-price-174" class="regular-price"> <span class="price">$25.00</span> </span> </div>
+                  <div id="product-options-wrapper" class="product-options">
+                <dl class="last">
+                      <dt>
+                    <label class="required"><em>*</em>Color</label>
+                  </dt>
+                      <dd>
+                    <div class="input-box">
+                          <select class="required-entry super-attribute-select" >
+                        <option value="">Choose an Option...</option>
+                        <option value="22">Green</option>
+                      </select>
+                        </div>
+                  </dd>
+                      <dt>
+                    <label class="required"><em>*</em>Shirt Size</label>
+                  </dt>
+                      <dd class="last">
+                    <div class="input-box">
+                          <select class="required-entry super-attribute-select">
+                        <option>Choose an Option...</option>
+                      </select>
+                        </div>
+                  </dd>
+                    </dl>
+                <p class="required">* Required Fields</p>
+              </div>
+                  <div class="product-options-bottom">
+                <div class="add-to-cart">
+                      <label>Qty:</label>
+                      <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" />
+                      <button class="button btn-cart" title="Add to Cart" type="button"><span><span>Add to Cart</span></span></button>
+                    </div>
+                <ul class="add-to-links">
+                      <li><a class="link-wishlist" href="#">Add to Wishlist</a></li>
+                      <li><a class="link-compare" href="#">Add to Compare</a></li>
+                    </ul>
+                <div class="shareButton">
+                      <p class="email-friend"><a href="#">Email to a Friend</a></p>
+                      <!-- AddThis Button BEGIN -->
+                      <div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_preferred_1"></a> <a class="addthis_button_preferred_2"></a> <a class="addthis_button_preferred_3"></a> <a class="addthis_button_preferred_4"></a> <a class="addthis_button_compact"></a> <a class="addthis_counter addthis_bubble_style"></a> </div>
+                      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ec8e9992c395916"></script> 
+                      <!-- AddThis Button END --> 
+                    </div>
+              </div>
+                </div>
+            <div class="p-box-btm"></div>
+          </div>
+              <div class="clear"></div>
+            </div>
+      </div>
+          <div class="btm-full">&nbsp;</div>
+          <div class="top-full">&nbsp;</div>
+          <div class="product-collateral tabs">
+        <ul class="product-tabs tabNavigation">
+              <li id="product_tabs_description"><a href="#tab1"><span>Product Description</span></a></li>
+              <li id="product_tabs_additional"><a href="#tab2"><span>Additional Information</span></a></li>
+              <li id="product_tabs_product.tags"><a href="#tab3"><span>Product Tags</span></a></li>
+            </ul>
+        <div class="product-tabs-content" id="tab1">
+              <h2>Details</h2>
+              <div class="std">
+            <ul>
+                  <li>Duis vulputate magna sed magna porta in dignissim dolor placerat.</li>
+                  <li>Nullam sodales varius metus, vitae facilisis velit mattis ut.</li>
+                  <li>Sed in sapien eu urna adipiscing ornare.</li>
+                  <li>Curabitur ut leo elit, in cursus sapien.</li>
+                  <li>Maecenas vulputate ipsum et massa sagittis sit amet accumsan lacus aliquet.</li>
+                  <li>Maecenas viverra est sed turpis hendrerit euismod feugiat mauris volutpat.</li>
+                </ul>
+          </div>
+            </div>
+        <div id="tab2" class="product-tabs-content">
+              <h2>Additional Information</h2>
+              <table id="product-attribute-specs-table" class="data-table">
+            <col width="25%" />
+            <col />
+            <tbody>
+                  <tr class="first last odd">
+                <th class="label">Model</th>
+                <td class="data last">Impatience</td>
+              </tr>
+                </tbody>
+          </table>
+            </div>
+        <div id="tab3" class="product-tabs-content">
+              <div class="box-collateral box-tags">
+            <h2>Product Tags</h2>
+            <h3>Other people marked this product with these tags:</h3>
+            <ul class="product-tags" id="product-tags_cc06c0ede520d643871e5d1be471df02">
+                  <li class="first"><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/4/">young</a> (3)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/5/">hip</a> (3)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/12/">cool</a> (6)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/16/">green</a> (3)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/17/">bones</a> (3)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/27/">SEXY</a> (8)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/28/">tight</a> (3)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/58/">tina</a> (1)</li>
+                  <li><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/109/">Hohoho</a> (3)</li>
+                  <li class="last"><a href="http://webdziner.im/t-shirt/index.php/tag/product/list/tagId/184/">cool t-shirt</a> (3)</li>
+                </ul>
+            <div class="form-add">
+                  <label>Add Your Tags:</label>
+                  <div class="input-box">
+                <input type="text" id="productTagName" name="productTagName" class="input-text required-entry" />
+              </div>
+                  <button onclick="submitTagForm()" class="button" title="Add Tags" type="button"> <span> <span>Add Tags</span> </span> </button>
+                </div>
+            <p class="note">Use spaces to separate tags. Use single quotes (') for phrases.</p>
+          </div>
+            </div>
+      </div>
+          <div class="btm-full">&nbsp;</div>
+          <div class="top-full">&nbsp;</div>
+          <div class="box-collateral box-up-sell">
+        <h2>You may also be interested in the following product(s)</h2>
+        <table id="upsell-product-table" class="products-grid">
+              <tbody>
+            <tr class="first last odd">
+                  <td><div class="up-border"> <a class="product-image" href="#"><img height="216" width="216" alt="Coalesce: Functioning On Impatience T-Shirt" src="images/2_2_2.jpg" /></a>
+                      <h3 class="product-name"><a href="#">Coalesce: Functioning On Impatience T-Shirt</a></h3>
+                      <div class="price-box"> <span class="regular-price"> <span class="price">$49.00</span> </span> </div>
+                    </div></td>
+                  <td><div class="up-border"> <a class="product-image" href="#"><img alt="" height="216" width="216" src="images/6_2.jpg" /></a>
+                      <h3 class="product-name"><a title="Lorem Ipsum is simply dummy On Impatience T-Shirt" href="#">Lorem Ipsum is simply dummy On Impatience T-Shirt</a></h3>
+                      <div class="price-box"> <span class="regular-price"> <span class="price">$66.00</span> </span> </div>
+                    </div></td>
+                  <td class="last"><div class="up-border"> <a class="product-image" href="#"><img alt="" height="216" width="216" src="images/4_3.jpg" /></a>
+                      <h3 class="product-name"><a href="#">Ink Eater: Krylon Bombear Destroyed Tee</a></h3>
+                      <div class="price-box"> <span class="regular-price"> <span class="price">$22.00</span> </span> <a class="minimal-price-link" href="#"> <span class="label">As low as:</span> <span class="price"> $18.00 </span> </a> </div>
+                    </div></td>
+                </tr>
+          </tbody>
+            </table>
+      </div>
+          <div class="btm-full"></div>
+        </div>
+  </div>
+    </div>
+<div class="clear"></div>
+<div class="footer-container">
+      <div class="footer">
+    <div class="block1">
+          <h2>Information</h2>
+          <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+          <h2>Connect with us</h2>
+          <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Youtube</a></li>
+      </ul>
+        </div>
+    <div class="block1">
+          <h2>Services &amp; Support</h2>
+          <ul>
+        <li><a href="#">Customer Assistance</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">International Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Policies</a></li>
+      </ul>
+        </div>
+    <div class="block2">
+          <h2>About the store</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <h2>Newsletter</h2>
+          <p>Sign Up for Our Newsletter</p>
+          <ul>
+        <li>
+              <div class="block block-subscribe">
+            <div class="block-content">
+                  <div class="input-box">
+                <input type="text" class="input-text" title="Sign up for our newsletter" name="email" />
+              </div>
+                  <div class="actions">
+                <button class="button" title="Subscribe" type="submit"><span><span>Subscribe</span></span></button>
+              </div>
+                </div>
+          </div>
+            </li>
+        <li>
+              <div class="payment-method"><span>Payment Method</span></div>
+            </li>
+      </ul>
+        </div>
+  </div>
+      <div class="clear">&nbsp;</div>
+      <div class="copyright">
+    <address>
+        &copy; 2011 T-Shirt Store. All Rights Reserved.
+        </address>
+  </div>
+    </div>
+</body>
+</html>

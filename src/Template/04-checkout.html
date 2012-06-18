@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>T-Shirt Store Checkout</title>
+<link href="includes/style.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="includes/js/carousel.js"></script>
+<script type="text/javascript" src="includes/js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="includes/js/nivo.slider.setting.js"></script>
+</head>
+
+<body>
+<div align="center" style="background:#FFF; padding:5px; position:fixed; color:#999; top:0; position:fixed; width:100%; z-index:10000;"><a href="01-home.html">Home</a> | <a href="02-category.html">Category</a> | <a href="03-product.html">Products</a> | <a href="04-checkout.html">Checkout</a> | <a href="05-page.html">Page</a></div>
+<div class="page">
+  <div class="header-container">
+    <div class="header">
+      <div class="shopLinks">
+        <ul class="links">
+          <li class="first"><a title="My Account" href="#">My Account</a></li>
+          <li><a title="My Wishlist" href="#">My Wishlist</a></li>
+          <li><a class="top-link-cart" title="My Cart" href="#">My Cart</a></li>
+          <li><a class="top-link-checkout" title="Checkout" href="#">Checkout</a></li>
+          <li class=" last"><a title="Log In" href="#">Log In</a></li>
+        </ul>
+        <p class="welcome-msg">Welcome to our online store!<span>&nbsp;</span></p>
+      </div>
+      <h1 class="logo"><strong>Magento Commerce</strong><a class="logo" title="Magento Commerce" href="#"><img alt="Magento Commerce" src="images/logo.png" /></a></h1>
+      <div class="quick-access">
+        <div class="shoppingCart">
+          <div class="block block-cart">
+            <div class="block-content">
+              <p class="empty">You have no items in your shopping cart.</p>
+            </div>
+          </div>
+        </div>
+        <div class="search">
+          <div class="form-search">
+            <input type="text" class="input-text" value="" name="q" />
+            <button class="button" title="Search" type="submit"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-container">
+    <ul id="nav">
+      <li class="level-top first"> <a class="level-top" href="#"> <span>New Products</span> </a></li>
+      <li class="level-top"> <a class="level-top" href="#"> <span>Specials </span> </a> </li>
+      <li class="level-top"> <a class="level-top" href="#"> <span>Cool T-Shirts</span> </a> </li>
+      <li class="level-top"> <a class="level-top" href="#"> <span>Teens</span> </a> </li>
+      <li class="level-top"> <a class="level-top" href="#"> <span>Active Wear</span> </a> </li>
+      <li class="level-top last"> <a class="level-top" href="#"> <span>Jackets &amp; Coats</span> </a> </li>
+    </ul>
+  </div>
+  <div class="main" style="margin-top:20px;">
+    <div class="col-main">
+      <div class="category-top">&nbsp;</div>
+      <div class="one-page">
+        <div class="page-title">
+          <h1>Checkout</h1>
+        </div>
+        <ol id="checkoutSteps" class="opc">
+          <li class="section allow active" id="opc-login">
+            <div class="step-title"> <span class="number">1</span>
+              <h2>Checkout Method</h2>
+              <a href="#">Edit</a> </div>
+            <div style="" class="step a-item" id="checkout-step-login">
+              <div class="col2-set">
+                <div class="col-1">
+                  <h3>Checkout as a Guest or Register</h3>
+                  <p>Register with us for future convenience:</p>
+                  <ul class="form-list">
+                    <li class="control">
+                      <input type="radio" class="radio" value="guest" id="login:guest" name="checkout_method" />
+                      <label for="login:guest">Checkout as Guest</label>
+                    </li>
+                    <li class="control">
+                      <input type="radio" class="radio" value="register" id="login:register" name="checkout_method" />
+                      <label for="login:register">Register</label>
+                    </li>
+                  </ul>
+                  <h4>Register and save time!</h4>
+                  <p>Register with us for future convenience:</p>
+                  <ul class="ul">
+                    <li>Fast and easy check out</li>
+                    <li>Easy access to your order history and status</li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h3>Login</h3>
+                  <fieldset class="">
+                    <h4>Already registered?</h4>
+                    <p>Please log in below:</p>
+                    <ul class="form-list">
+                      <li>
+                        <label class="required" for="login-email"><em>*</em>Email Address</label>
+                        <div class="input-box">
+                          <input type="text" value="" name="login[username]" id="login-email" class="input-text required-entry validate-email" />
+                        </div>
+                      </li>
+                      <li>
+                        <label class="required" for="login-password"><em>*</em>Password</label>
+                        <div class="input-box">
+                          <input type="password" name="login[password]" id="login-password" class="input-text required-entry" />
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="col2-set">
+                <div class="col-1">
+                  <div class="buttons-set">
+                    <p class="required">&nbsp;</p>
+                    <button onclick="checkout.setMethod();" class="button" type="button"><span><span>Continue</span></span></button>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="buttons-set">
+                    <p class="required">* Required Fields</p>
+                    <a class="f-left" href="http://webdziner.im/t-shirt/index.php/customer/account/forgotpassword/">Forgot your password?</a>
+                    <button onclick="onepageLogin(this)" class="button" type="submit"><span><span>Login</span></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="section" id="opc-billing">
+            <div class="step-title"> <span class="number">2</span>
+              <h2>Billing Information</h2>
+              <a href="#">Edit</a> </div>
+            <div style="display: none;" class="step a-item" id="checkout-step-billing">
+              <fieldset>
+                <ul class="form-list">
+                  <li id="billing-new-address-form">
+                    <fieldset>
+                      <input type="hidden" value="" />
+                      <ul>
+                        <li class="fields">
+                          <div class="customer-name">
+                            <div class="field name-firstname">
+                              <label class="required" ><em>*</em>First Name</label>
+                              <div class="input-box">
+                                <input type="text" class="input-text required-entry" title="First Name" value="" />
+                              </div>
+                            </div>
+                            <div class="field name-lastname">
+                              <label class="required"><em>*</em>Last Name</label>
+                              <div class="input-box">
+                                <input type="text" class="input-text required-entry" title="Last Name" value="" />
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="fields">
+                          <div class="field">
+                            <label >Company</label>
+                            <div class="input-box">
+                              <input type="text" class="input-text" title="Company" value="" />
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label class="required" ><em>*</em>Email Address</label>
+                            <div class="input-box">
+                              <input type="text" class="input-text validate-email required-entry" title="Email Address" value="" />
+                            </div>
+                          </div>
+                        </li>
+                        <li class="wide">
+                          <label class="required" ><em>*</em>Address</label>
+                          <div class="input-box">
+                            <input type="text" class="input-text required-entry" value="" />
+                          </div>
+                        </li>
+                        <li class="wide">
+                          <div class="input-box">
+                            <input type="text" class="input-text" value="" />
+                          </div>
+                        </li>
+                        <li class="fields">
+                          <div class="field">
+                            <label class="required" ><em>*</em>City</label>
+                            <div class="input-box">
+                              <input type="text" class="input-text required-entry" value="" />
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label class="required" ><em>*</em>State/Province</label>
+                            <div class="input-box">
+                              <select style="" class="validate-select" title="State/Province" >
+                                <option value="">Please select region, state or province</option>
+                                <option value="1">Alabama</option>
+                              </select>
+                              <input type="text" style="display: none;" class="input-text" title="State/Province" value="" />
+                            </div>
+                          </div>
+                        </li>
+                        <li class="fields">
+                          <div class="field">
+                            <label class="required"><em>*</em>Zip/Postal Code</label>
+                            <div class="input-box">
+                              <input type="text" class="input-text validate-zip-international required-entry" value=""  />
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label class="required"><em>*</em>Country</label>
+                            <div class="input-box">
+                              <select title="Country" class="validate-select">
+                                <option value=""> </option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">American Samoa</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="fields">
+                          <div class="field">
+                            <label class="required"><em>*</em>Telephone</label>
+                            <div class="input-box">
+                              <input type="text" class="input-text required-entry"  />
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label>Fax</label>
+                            <div class="input-box">
+                              <input type="text" class="input-text"  />
+                            </div>
+                          </div>
+                        </li>
+                        <li class="fields">
+                          <div class="field">
+                            <label class="required"><em>*</em>Password</label>
+                            <div class="input-box">
+                              <input type="password" class="input-text required-entry validate-password" />
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label class="required"><em>*</em>Confirm Password</label>
+                            <div class="input-box">
+                              <input type="password" class="input-text required-entry validate-cpassword" />
+                            </div>
+                          </div>
+                        </li>
+                        <li class="no-display">
+                          <input type="hidden" value="1" />
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </li>
+                  <li class="control">
+                    <input type="radio" class="radio" title="Ship to this address" checked="checked" value="1"  />
+                    <label>Ship to this address</label>
+                  </li>
+                  <li class="control">
+                    <input type="radio" class="radio"  />
+                    <label>Ship to different address</label>
+                  </li>
+                </ul>
+                <div id="billing-buttons-container" class="buttons-set">
+                  <p class="required">* Required Fields</p>
+                  <button class="button" title="Continue" type="button"><span><span>Continue</span></span></button>
+                </div>
+              </fieldset>
+            </div>
+          </li>
+          <li class="section">
+            <div class="step-title"> <span class="number">3</span>
+              <h2>Shipping Information</h2>
+              <a href="#">Edit</a> </div>
+          </li>
+          <li class="section">
+            <div class="step-title"> <span class="number">4</span>
+              <h2>Shipping Method</h2>
+              <a href="#">Edit</a> </div>
+          </li>
+          <li class="section">
+            <div class="step-title"> <span class="number">5</span>
+              <h2>Payment Information</h2>
+              <a href="#">Edit</a> </div>
+          </li>
+          <li class="section">
+            <div class="step-title"> <span class="number">6</span>
+              <h2>Order Review</h2>
+              <a href="#">Edit</a> </div>
+          </li>
+        </ol>
+      </div>
+      <div class="category-btm">&nbsp;</div>
+    </div>
+    <div class="col-right sidebar">
+      <div class="top-side">&nbsp;</div>
+      <div class="m-side">
+        <div id="checkout-progress-wrapper">
+          <div class="block block-progress opc-block-progress">
+            <div class="block-title"> <strong><span>Your Checkout Progress</span></strong> </div>
+            <div class="block-content">
+              <dl>
+                <dt> Billing Address </dt>
+                <dt> Shipping Address </dt>
+                <dt> Shipping Method </dt>
+                <dt> Payment Method </dt>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btm-side"></div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="footer-container">
+  <div class="footer">
+    <div class="block1">
+      <h2>Information</h2>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <h2>Connect with us</h2>
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Youtube</a></li>
+      </ul>
+    </div>
+    <div class="block1">
+      <h2>Services &amp; Support</h2>
+      <ul>
+        <li><a href="#">Customer Assistance</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">International Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Policies</a></li>
+      </ul>
+    </div>
+    <div class="block2">
+      <h2>About the store</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      <h2>Newsletter</h2>
+      <p>Sign Up for Our Newsletter</p>
+      <ul>
+        <li>
+          <div class="block block-subscribe">
+            <div class="block-content">
+              <div class="input-box">
+                <input type="text" class="input-text"  name="email" />
+              </div>
+              <div class="actions">
+                <button class="button" title="Subscribe" type="submit"><span><span>Subscribe</span></span></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="payment-method"><span>Payment Method</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear">&nbsp;</div>
+  <div class="copyright">
+    <address>
+    &copy; 2011 T-Shirt Store. All Rights Reserved.
+    </address>
+  </div>
+</div>
+</body>
+</html>

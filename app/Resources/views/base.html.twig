@@ -1,0 +1,99 @@
+{# app/Resources/views/base.html.twig #}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}T-Shirt Store Home{% endblock %}</title>
+        {% block stylesheets %}
+            <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+            {% stylesheets 'css/*' %}
+                <link href="style.css" rel="stylesheet" type="text/css" />
+            {% endstylesheets %}
+        {% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+            <script type="text/javascript" src="js/carousel.js"></script>
+            <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+            <script type="text/javascript" src="js/nivo.slider.setting.js"></script>
+        {% endblock %}
+        {#<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />#}
+    </head>
+    <body>
+        <div align="center" style="background:#FFF; padding:5px; position:fixed; color:#999; top:0; position:fixed; width:100%; z-index:10000;"><a href="{{ path('TShirtSiteBundle_homepage') }}">Home</a> | <a href="{{ path('TShirtSiteBundle_products') }}">Products</a></div>
+        <div class="page">
+            <div class="header-container">
+                <div class="header">
+                    <div class="shopLinks">
+                        <ul class="links">
+                            <li class="first"><a title="Home" href="{{ path('TShirtSiteBundle_homepage') }}">Home</a></li>
+                            {% if app.user %}
+                                <li><a class="top-link-add-product" title="Add Product" href="#">Add Product</a></li>
+                                <li><a class="top-link-add-photo" title="Add Customer Photo" href="#">Add Customer Photo</a></li>
+                                <li class="last"><a title="Log Out" href="{{ path('logout') }}">Log Out</a></li>
+                            {% else %}
+                                <li class="last"><a title="Log In" href="{{ path('login') }}">Log In</a></li>
+                            {% endif %}
+                        </ul>
+                        <p class="welcome-msg">Welcome to our online store!<span>&nbsp;</span></p>
+                    </div>
+                    <h1 class="logo"><strong>TShirt Company</strong><a class="logo" title="TShirt Company" href="{{ path('TShirtSiteBundle_homepage') }}"><img alt="TShirt Comapny" src="images/logo.png" /></a></h1>
+                    <div class="quick-access">
+                        <div class="search">
+                            <form method="get" action="" id="search_mini_form">
+                                <div class="form-search">
+                                    <input type="text" class="input-text" value="" name="q" id="search" />
+                                    <button class="button" title="Search" type="submit"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-container">
+                <ul id="nav">
+                    <!--
+                    @todo fix top bar so that last column is displaying properly
+                    -->
+                    <li class="level-top first"><a class="level-top" href="{{ path('TShirtSiteBundle_new') }}"><span>New Products</span></a></li>
+                    <li class="level-top"><a class="level-top" href="{{ path('TShirtSiteBundle_popular') }}"><span>Popular Items</span></a></li>
+                    <li class="level-top last"><a class="level-top" href="{{ path('TShirtSiteBundle_products') }}"><span>All Products</span></a></li>
+                </ul>
+            </div>
+        {% block body %}{% endblock %}
+        </div>
+
+        {% block bottombar %}
+        <div class="footer-container">
+            <div class="footer">
+                <div class="block1">
+                    <h2>Connect with us</h2>
+                    <ul>
+                        <li><a href="https://twitter.com/#!/csiebler">Twitter</a></li>
+                        <li><a href="http://www.facebook.com/cory.siebler">Facebook</a></li>
+                        <li><a href="http://cory.development.ghost-armor.com/Blog/web/">Blog</a></li>
+                        <li><a href="http://www.youtube.com/user/csiebler">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="block2">
+                    <h2>About the store</h2>
+                    <p>This online store is a practice example that will help the author learn how to use Git, Symfony, and JIRA. I hope this isn't too difficult!</p>
+                    <h2>Locations</h2>
+                    <ul>
+                        <li>Phoenix - 123 W 1st Street - (602) 123-4567</li>
+                        <li>Chandler - 456 E 2nd Street - (480) 123-4567</li>
+                        <li>Mesa - 678 N 3rd Ave - (480) 123-9876</li>
+                        <li>Scottsdale - 900 S 4th Blvd - (480) 555-555</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear">&nbsp;</div>
+            <div class="copyright">
+                <address>
+                    &copy; 2012 T-Shirt Store. All Rights Reserved.
+                </address>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
