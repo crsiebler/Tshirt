@@ -1,0 +1,26 @@
+{# src/Tshirt/SiteBundle/Resources/views/Page/index.html.twig #}
+
+{% extends 'TshirtSiteBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="home-products">
+        <div id="carousel_container">
+            <div id="left_scroll"><a class="left_arrow" href="javascript:slide(&quot;left&quot;);"></a></div>
+            <div class="c-left">&nbsp;</div>
+            <div id="carousel_inner">
+                <ul style="left: 0px;" id="carousel_ul" class="products-grid">
+                    {% for design in designs %}
+                            <li class="item">
+                                <div><a class="product-image" title="{{ design.name }}" href="{{ path('TshirtSiteBundle_product_show', { 'id': design.id } ) }}"><img height="216" width="216" alt="{{ design.name }}" src="{{ asset(design.images.first().getWebPath()) }}" /></a>
+                                <h2 class="product-name"><a title="{{ design.name }}" href="{{ path('TshirtSiteBundle_product_show', { 'id': design.id } ) }}">{{ design.name }}</a></h2>
+                                </div>
+                            </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="c-right">&nbsp;</div>
+            <div id="right_scroll"><a class="right_arrow" href="javascript:slide(&quot;right&quot;);"></a></div>
+            <input type="hidden" value="5000" id="hidden_auto_slide_seconds" />
+        </div>
+    </div>
+{% endblock %}

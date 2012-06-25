@@ -1,0 +1,7 @@
+parameters:
+#    tshirt_security.example.class: Tshirt\SecurityBundle\Example
+
+services:
+#    tshirt_security.example:
+#        class: %tshirt_security.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

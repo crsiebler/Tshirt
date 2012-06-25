@@ -1,0 +1,66 @@
+{# src/Tshirt/SiteBundle/Resources/views/Products/show.html.twig #}
+
+{% extends 'TshirtSiteBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="main">
+        <div class="breadcrumbs">
+        <ul>
+            <li class="home"><a title="Go to Home Page" href="{{ path('TshirtSiteBundle_homepage') }}">Home</a> <span>/ </span> </li>
+            <li><strong>{{ title }}</strong> </li>
+        </ul>
+        </div>
+        <div class="col-main">
+        {#
+        <div class="toolbar">
+            <div class="t-right">&nbsp;</div>
+            <div class="t-left">&nbsp;</div>
+            <div class="tb">
+            <div class="pager">
+                <div class="pages"><strong>Page:</strong>
+                <ol>
+                    <li class="current">1</li>
+                    <li><a href="#">2</a></li>
+                    <li><a title="Next" href="#" class="next i-next"><img class="v-middle" alt="Next" src="{{ asset('images/pager_arrow_right.gif') }}" /></a></li>
+                </ol>
+                </div>
+                <!--
+                <div class="limiter">
+                <label>Show</label>
+                <select>
+                    <option selected="selected" value="">6</option>
+                    <option value="">12</option>
+                    <option value="">18</option>
+                </select>
+                per page</div>
+                -->
+            </div>
+            </div>
+        </div>
+        #}
+        <div class="category-top">&nbsp;</div>
+        <div class="category-products">
+            <div class="page-title">
+            <h1>{{ title }}</h1>
+            </div>
+            {% for image in images %}
+                {% if 0 != loop.index % 2 %}
+                    <ul class="products-grid first">
+                    <li class="item first"><img width="216" height="216" alt="{{ image.path }}" src="{{ asset(image.getWebPath()) }}" />
+                    </li>
+                    {% if loop.last %}
+                        <li class="clear"></li>
+                        </ul>
+                    {% endif %}
+                {% else %}
+                    <li class="item last"><img width="216" height="216" alt="{{ image.path }}" src="{{ asset(image.getWebPath()) }}" />
+                    </li>
+                    <li class="clear"></li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="category-btm">&nbsp;</div>
+        </div>
+    </div>
+{% endblock %}

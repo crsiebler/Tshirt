@@ -1,0 +1,8 @@
+{# src/Tshirt/SiteBundle/Resources/views/Design/form.html.twig #}
+
+<form action="{{ path('TshirtSiteBundle_category_add') }}" method="post" {{ form_enctype(form) }} class="form">
+    {{ form_widget(form) }}
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>

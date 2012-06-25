@@ -1,0 +1,69 @@
+TshirtSiteBundle_homepage:
+    pattern:  /
+    defaults: { _controller: TshirtSiteBundle:Page:index }
+    
+TshirtSiteBundle_show_new:
+    pattern:  /products/new  
+    defaults: { _controller: TshirtSiteBundle:Design:showNew }
+    
+TshirtSiteBundle_show_popular:
+    pattern:  /products/popular
+    defaults: { _controller: TshirtSiteBundle:Design:showPopular }
+    
+TshirtSiteBundle_show_all:
+    pattern:  /products/all
+    defaults: { _controller: TshirtSiteBundle:Design:showAll }
+    
+TshirtSiteBundle_product_add:
+    pattern:  /products/add
+    defaults: { _controller: TshirtSiteBundle:Design:add }
+    requirements:
+        _method:  GET|POST
+    
+TshirtSiteBundle_product_show:
+    pattern:  /products/{id}
+    defaults: { _controller: TshirtSiteBundle:Design:show }
+    requirements:
+        _method:  GET
+        id: \d+
+        
+TshirtSiteBundle_product_update:
+    pattern:  /products/update/{id}
+    defaults: { _controller: TshirtSiteBundle:Design:update }
+    requirements:
+        _method:  GET|POST
+        id: \d+
+        
+TshirtSiteBundle_category_add:
+    pattern:  /category/add
+    defaults: { _controller: TshirtSiteBundle:Category:add }
+    requirements:
+        _method:  GET|POST
+        
+TshirtSiteBundle_color_add:
+    pattern:  /color/add
+    defaults: { _controller: TshirtSiteBundle:Color:add }
+    requirements:
+        _method:  GET|POST
+        
+TshirtSiteBundle_image_addDesignPhoto:
+    pattern:  /designphoto/add/{id}
+    defaults: { _controller: TshirtSiteBundle:Image:addDesignPhoto }
+    requirements:
+        _method:  GET|POST
+        id: \d+
+        
+TshirtSiteBundle_image_addCustomerPhoto:
+    pattern:  /customerphoto/add/{id}
+    defaults: { _controller: TshirtSiteBundle:Image:addCustomerPhoto }
+    requirements:
+        _method:  GET|POST
+        id: \d+
+        
+TshirtSiteBundle_image_show:
+    pattern:  /customerphoto/{id}
+    defaults: { _controller: TshirtSiteBundle:Image:showGallery }
+    requirements:
+        _method:  GET
+        id: \d+
+    

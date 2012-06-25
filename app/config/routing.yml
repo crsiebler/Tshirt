@@ -1,3 +1,15 @@
+TshirtSiteBundle:
+    resource: "@TshirtSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+login:
+    pattern:  /login
+    defaults: { _controller: TshirtSecurityBundle:Security:login }
+login_check:
+    pattern:  /login_check
+logout:
+    pattern:  /logout
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"

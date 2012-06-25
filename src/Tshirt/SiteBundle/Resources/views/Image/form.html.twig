@@ -1,0 +1,17 @@
+{# src/Tshirt/SiteBundle/Resources/views/Design/form.html.twig #}
+
+{% if 'TshirtSiteBundle_image_addDesignPhoto' in app.request.attributes.get('_route') %}
+    <form action="{{ path('TshirtSiteBundle_image_addDesignPhoto', { 'id': design.id } ) }}" method="post" {{ form_enctype(form) }} class="form">
+        {{ form_widget(form) }}
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+{% else %}
+    <form action="{{ path('TshirtSiteBundle_image_addCustomerPhoto', { 'id': design.id } ) }}" method="post" {{ form_enctype(form) }} class="form">
+        {{ form_widget(form) }}
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+{% endif %}

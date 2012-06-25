@@ -1,0 +1,17 @@
+{# src/Tshirt/SiteBundle/Resources/views/Design/update.html.twig #}
+
+{% extends 'TshirtSiteBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="main" style="margin-top:20px;">
+        <div class="col-main">
+            <div class="category-top">&nbsp;</div>
+            <div class="one-page">
+                <div class="page-title">
+                    <h1>Update this Design</h1>
+                </div>
+                {% include 'TshirtSiteBundle:Design:form.html.twig' with { 'form': form } %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,89 @@
+{# src/Tshirt/SiteBundle/Resources/Products/show.html.twig #}
+
+{% extends 'TshirtSiteBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="main">
+        <div class="breadcrumbs">
+            <ul>
+                <li class="home"><a title="Go to Home Page" href="{{ path('TshirtSiteBundle_homepage') }}">Home</a><span>/</span></li>
+                <li><strong>{{ design.name }}</strong></li>
+            </ul>
+        </div>
+        <div class="col-main1">
+            <div class="top-full">&nbsp;</div>
+            <div class="product-view">
+                <div class="product-essential">
+                    {% for image in design.images %}
+                        {% if loop.first %}
+                            <div class="product-img-box">
+                                <p class="product-image product-image-zoom"><a href='{{ asset(image.getWebPath()) }}' class = 'cloud-zoom' id='zoom1' rel="position: 'inside'"><img src="{{ asset(image.getWebPath()) }}" width="354" height="354" alt="Optional title display" /></a></p>
+                                <div class="more-views">
+                                    <ul>
+                        {% endif %}
+                        {% if image.isProductImage %}
+                            <li><a href='{{ asset(image.getWebPath()) }}' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '{{ asset(image.getWebPath()) }}' "><img src="{{ asset(image.getWebPath()) }}" width="68" height="68" alt = "Thumbnail 1"/></a></li>
+                        {% endif %}
+                    {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                    <div class="product-shop">
+                        <div class="product-name">
+                            <h1>{{ design.name }}</h1>
+                        </div>
+                        <div class="customer-photos">
+                            <p class="customer-photo-links">
+                            {% if app.user %}
+                                <a href="{{ path('TshirtSiteBundle_product_update', { 'id': design.id } ) }}">Edit this Product</a><span class="separator">|</span>
+                                <a href="{{ path('TshirtSiteBundle_image_addDesignPhoto', { 'id': design.id } ) }}">Add Product Image</a><span class="separator">|</span>
+                            {% endif %}
+                                <a href="{{ path('TshirtSiteBundle_image_addCustomerPhoto', { 'id': design.id } ) }}">Add Customer Photo</a><span class="separator">|</span>
+                                <a href="{{ path('TshirtSiteBundle_image_show', { 'id': design.id } ) }}">Show Customer Photo Gallery</a></p>
+                        </div>
+                        <div class="p-box-top"></div>
+                        <div class="p-box">
+                            <div class="price-box"><span id="product-price-174" class="regular-price"><span class="price">$ {{ design.price }}</span></span></div>
+                            <div id="product-options-wrapper" class="product-options">
+                                <dl class="last">
+                                    <dt>
+                                    <label class="required">Color</label>
+                                    </dt>
+                                    <dd>
+                                        <div class="input-box">
+                                            <select class="required-entry super-attribute-select" >
+                                                <option value="">See Available Colors...</option>
+                                                {% for color in design.colors %}
+                                                    <option value="{{ color.id }}">{{ color.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </dd>
+                                    <dt>
+                                    <label class="required">Shirt Size</label>
+                                    </dt>
+                                    <dd class="last">
+                                        <div class="input-box">
+                                            <select class="required-entry super-attribute-select">
+                                                <option>See Available Sizes...</option>
+                                                <option value="1">Small</option>
+                                                <option value="2">Medium</option>
+                                                <option value="3">Large</option>
+                                                <option value="4">X-Large</option>
+                                                <option value="5">XXL (Additional $2.00) - ${{ design.getAdditionalPrice()|number_format(2) }}</option>
+                                                <option value="6">XXXL(Additional $2.00) - ${{ design.getAdditionalPrice()|number_format(2) }}</option>
+                                            </select>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="p-box-btm"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="btm-full">&nbsp;</div>
+        </div>
+    </div>
+{% endblock %}
