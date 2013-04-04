@@ -39,9 +39,9 @@
                         <h1 class="logo"><strong>T-Shirt Company</strong><a class="logo" title="T-Shirt Company" href="{{ path('TshirtSiteBundle_homepage') }}"><img alt="TShirt Comapny" src="{{ asset('images/logo.png') }}" /></a></h1>
                         <div class="quick-access">
                             <div class="search">
-                                <form method="get" action="" id="search_mini_form">
+                                <form method="get" action="{{ path('TshirtSiteBundle_search') }}" id="search_mini_form">
                                     <div class="form-search">
-                                        <input type="text" class="input-text" value="" name="q" id="search" />
+                                        <input type="text" class="input-text" value="" name="query" id="search" />
                                         <button class="button" title="Search" type="submit"></button>
                                     </div>
                                 </form>

@@ -1,0 +1,24 @@
+{# src/Tshirt/SiteBundle/Resources/views/Search/error.html.twig #}
+
+{% extends 'TshirtSiteBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="main">
+        <div class="breadcrumbs">
+        <ul>
+            <li class="home"><a title="Go to Home Page" href="{{ path('TshirtSiteBundle_homepage') }}">Home</a> <span>/ </span> </li>
+            <li><strong>{{ title }}</strong> </li>
+        </ul>
+        </div>
+        <div class="col-main">
+        <div class="category-top">&nbsp;</div>
+        <div class="category-products">
+            <div class="page-title">
+            <h1>{{ title }}</h1>
+            </div>
+            Unable to find "{{ query }}" Design
+        </div>
+        <div class="category-btm">&nbsp;</div>
+        </div>
+    </div>
+{% endblock %}

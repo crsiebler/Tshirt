@@ -2,6 +2,12 @@ TshirtSiteBundle_homepage:
     pattern:  /
     defaults: { _controller: TshirtSiteBundle:Page:index }
     
+TshirtSiteBundle_search:
+    pattern:  /search
+    defaults: { _controller: TshirtSiteBundle:Page:search }
+    requirements:
+        _method:  GET
+    
 TshirtSiteBundle_show_new:
     pattern:  /products/new  
     defaults: { _controller: TshirtSiteBundle:Design:showNew }

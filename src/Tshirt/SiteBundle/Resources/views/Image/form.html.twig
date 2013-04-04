@@ -4,14 +4,14 @@
     <form action="{{ path('TshirtSiteBundle_image_addDesignPhoto', { 'id': design.id } ) }}" method="post" {{ form_enctype(form) }} class="form">
         {{ form_widget(form) }}
         <p>
-            <input type="submit" value="Submit">
+            <button class="button" type="submit"><span><span>Submit</span></span></button>
         </p>
     </form>
 {% else %}
     <form action="{{ path('TshirtSiteBundle_image_addCustomerPhoto', { 'id': design.id } ) }}" method="post" {{ form_enctype(form) }} class="form">
         {{ form_widget(form) }}
         <p>
-            <input type="submit" value="Submit">
+            <button class="button" type="submit"><span><span>Submit</span></span></button>
         </p>
     </form>
 {% endif %}
